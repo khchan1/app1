@@ -14,11 +14,11 @@
 
 
 from flask import Flask, redirect, url_for, request, render_template
-app = Flask(__name__)
+app = Flask(__name__ , static_url_path='')
 
 @app.route('/')
-def index():
-    return ("console.log('Hello World')")
+def root():
+    return app.send_static_file('index.html')
  
  
 @app.route('/success/<name>')
