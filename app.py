@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 
 def index():
+    print ("Hello World")
     return ("""
 <!DOCTYPE html>
 <html>
